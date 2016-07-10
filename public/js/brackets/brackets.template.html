@@ -1,14 +1,15 @@
 <h2>Games</h2>
-<div class="game media" ng-repeat="game in $ctrl.games | orderBy: 'time'">
-  <div class="media-left media-middle">
+<div class="row game media" ng-repeat="game in $ctrl.games | orderBy: 'time'">
+  <div class="col-md-2 media-left media-middle">
     <div>
       {{ game.time | date: 'MMM d, yyyy' }}
     </div>
     <div>
-      <strong>Group {{ game.group }}</strong>
+      <strong ng-if="game.group">Group {{ game.group }}</strong>
+      <strong ng-if="!game.group">Game {{ game.id }}</strong>
     </div>
   </div>
-  <div class="media-body media-middle">
+  <div class="col-md-10 media-body media-middle">
     <game game="game" on-select="$ctrl.updateStandings()"></game>
   </div>
 </div>
