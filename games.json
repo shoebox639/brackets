@@ -1,0 +1,289 @@
+
+[{
+    "id": 1,
+    "time": "2016-08-04T12:00-04:00",
+    "group": "A",
+    "teams": [
+        "Iraq",
+        "Denmark"
+    ]
+},
+{
+    "id": 2,
+    "time": "2016-08-04T14:00-04:00",
+    "group": "D",
+    "teams": [
+        "Honduras",
+        "Algeria"
+    ]
+},
+{
+    "id": 3,
+    "time": "2016-08-04T15:00-04:00",
+    "group": "A",
+    "teams": [
+        "Brazil",
+        "South Africa"
+    ]
+},
+{
+    "id": 4,
+    "time": "2016-08-04T19:00-04:00",
+    "group": "C",
+    "teams": [
+        "Fiji",
+        "Korea Republic"
+    ]
+},
+{
+    "id": 5,
+    "time": "2016-08-04T17:00-04:00",
+    "group": "D",
+    "teams": [
+        "Portugal",
+        "Argentina"
+    ]
+},
+{
+    "id": 6,
+    "time": "2016-08-04T18:00-04:00",
+    "group": "B",
+    "teams": [
+        "Sweden",
+        "Colombia"
+    ]
+},
+{
+    "id": 7,
+    "time": "2016-08-04T16:00-04:00",
+    "group": "C",
+    "teams": [
+        "Mexico",
+        "Germany"
+    ]
+},
+{
+    "id": 8,
+    "time": "2016-08-04T21:00-04:00",
+    "group": "B",
+    "teams": [
+        "Nigeria",
+        "Japan"
+    ]
+},
+{
+    "id": 9,
+    "time": "2016-08-07T12:00-04:00",
+    "group": "C",
+    "teams": [
+        "Fiji",
+        "Mexico"
+    ]
+},
+{
+    "id": 10,
+    "time": "2016-08-07T14:00-04:00",
+    "group": "D",
+    "teams": [
+         "Honduras",
+         "Portugal"
+    ]
+},
+{
+    "id": 11,
+    "time": "2016-08-07T15:00-04:00",
+    "group": "C",
+    "teams": [
+        "Germany",
+        "Korea Republic"
+    ]
+},
+{
+    "id": 12,
+    "time": "2016-08-07T17:00-04:00",
+    "group": "D",
+    "teams": [
+        "Argentina",
+        "Algeria"
+    ]
+},
+{
+    "id": 13,
+    "time": "2016-08-07T18:00-04:00",
+    "group": "B",
+    "teams": [
+        "Sweden",
+        "Nigeria"
+    ]
+},
+{
+    "id": 14,
+    "time": "2016-08-07T18:00-04:00",
+    "group": "A",
+    "teams": [
+        "Denmark",
+        "South Africa"
+    ]
+},
+{
+    "id": 15,
+    "time": "2016-08-07T21:00-04:00",
+    "group": "B",
+    "teams": [
+        "Japan",
+        "Colombia"
+    ]
+},
+{
+    "id": 16,
+    "time": "2016-08-07T21:00-04:00",
+    "group": "A",
+    "teams": [
+        "Brazil",
+        "Iraq"
+    ]
+},
+{
+    "id": 17,
+    "time": "2016-08-10T12:00-04:00",
+    "group": "D",
+    "teams": [
+        "Algeria",
+        "Portugal"
+    ]
+},
+{
+    "id": 18,
+    "time": "2016-08-10T12:00-04:00",
+    "group": "D",
+    "teams": [
+        "Argentina",
+        "Honduras"
+    ]
+},
+{
+    "id": 19,
+    "time": "2016-08-10T15:00-04:00",
+    "group": "C",
+    "teams": [
+        "Germany",
+        "Fiji"
+    ]
+},
+{
+    "id": 20,
+    "time": "2016-08-10T15:00-04:00",
+    "group": "C",
+    "teams": [
+        "Korea Republic",
+        "Mexico"
+    ]
+},
+{
+    "id": 21,
+    "time": "2016-08-10T18:00-04:00",
+    "group": "B",
+    "teams": [
+        "Colombia",
+        "Nigeria"
+    ]
+},
+{
+    "id": 22,
+    "time": "2016-08-10T18:00-04:00",
+    "group": "B",
+    "teams": [
+        "Japan",
+        "Sweden"
+    ]
+},
+{
+    "id": 23,
+    "time": "2016-08-10T21:00-04:00",
+    "group": "A",
+    "teams": [
+        "Denmark",
+        "Brazil"
+    ]
+},
+{
+    "id": 24,
+    "time": "2016-08-10T21:00-04:00",
+    "group": "A",
+    "teams": [
+        "South Africa",
+        "Iraq"
+    ]
+},
+{
+    "id": 25,
+    "time": "2016-08-13T13:00-04:00",
+    "type": "quarter-finals",
+    "teams": [
+        "[1D]",
+        "[2C]"
+    ]
+},
+{
+    "id": 26,
+    "time": "2016-08-13T16:00-04:00",
+    "type": "quarter-finals",
+    "teams": [
+        "[1B]",
+        "[2A]"
+    ]
+},
+{
+    "id": 27,
+    "time": "2016-08-13T19:00-04:00",
+    "type": "quarter-finals",
+    "teams": [
+        "[1C]",
+        "[2D]"
+    ]
+},
+{
+    "id": 28,
+    "time": "2016-08-13T22:00-04:00",
+    "type": "quarter-finals",
+    "teams": [
+        "[1A]",
+        "[2B]"
+    ]
+},
+{
+    "id": 29,
+    "time": "2016-08-17T13:00-04:00",
+    "type": "semi-finals",
+    "teams": [
+        "[W28]",
+        "[W27]"
+    ]
+},
+{
+    "id": 30,
+    "time": "2016-08-17T16:00-04:00",
+    "type": "semi-finals",
+    "teams": [
+        "[W26]",
+        "[W25]"
+    ]
+},
+{
+    "id": 31,
+    "time": "2016-08-20T13:00-04:00",
+    "type": "bronze medal match",
+    "teams": [
+        "[L30]",
+        "[L29]"
+    ]
+},
+{
+    "id": 32,
+    "time": "2016-08-20T17:30-04:00",
+    "type": "gold medal match",
+    "teams": [
+        "[W30]",
+        "[W29]"
+    ]
+}]

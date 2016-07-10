@@ -1,0 +1,40 @@
+body {
+  font-family: "Open Sans", sans-serif
+}
+
+img.flag {
+  border: 1px solid #ccc;
+  margin: 0 10px;
+}
+
+.game {
+  border-bottom: solid 1px #ccc;
+}
+
+.game:first-of-type {
+  border-top: solid 1px #ccc;
+}
+
+.team {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.team input {
+  width: 60px;
+}
+
+// .team.editable:hover {
+//   background-color: #ccc;
+//   cursor: pointer;
+//   -webkit-transition: background-color ease 0.5s;
+//   transition: background-color ease 0.5s;
+// }
+
+.fa.icon-success {
+  color: #5cb85c;
+}
+
+.media {
+  margin: 5px;
+}

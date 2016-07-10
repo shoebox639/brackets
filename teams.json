@@ -1,0 +1,96 @@
+[{
+    "name": "Brazil",
+    "group": "A",
+    "abbreviation": "bra",
+    "flag": "http://img.fifa.com/images/flags/4/bra.png"
+},
+{
+    "name": "Denmark",
+    "group": "A",
+    "abbreviation": "den",
+    "flag": "http://img.fifa.com/images/flags/4/den.png"
+},
+{
+    "name": "Iraq",
+    "group": "A",
+    "abbreviation": "irq",
+    "flag": "http://img.fifa.com/images/flags/4/irq.png"
+},
+{
+    "name": "South Africa",
+    "group": "A",
+    "abbreviation": "rsa",
+    "flag": "http://img.fifa.com/images/flags/4/rsa.png"
+},
+{
+    "name": "Colombia",
+    "group": "B",
+    "abbreviation": "col",
+    "flag": "http://img.fifa.com/images/flags/4/col.png"
+},
+{
+    "name": "Japan",
+    "group": "B",
+    "abbreviation": "jpn",
+    "flag": "http://img.fifa.com/images/flags/4/jpn.png"
+},
+{
+    "name": "Nigeria",
+    "group": "B",
+    "abbreviation": "nga",
+    "flag": "http://img.fifa.com/images/flags/4/nga.png"
+},
+{
+    "name": "Sweden",
+    "group": "B",
+    "abbreviation": "swe",
+    "flag": "http://img.fifa.com/images/flags/4/swe.png"
+},
+{
+    "name": "Fiji",
+    "group": "C",
+    "abbreviation": "fij",
+    "flag": "http://img.fifa.com/images/flags/4/fij.png"
+},
+{
+    "name": "Germany",
+    "group": "C",
+    "abbreviation": "ger",
+    "flag": "http://img.fifa.com/images/flags/4/ger.png"
+},
+{
+    "name": "Korea Republic",
+    "group": "C",
+    "abbreviation": "kor",
+    "flag": "http://img.fifa.com/images/flags/4/kor.png"
+},
+{
+    "name": "Mexico",
+    "group": "C",
+    "abbreviation": "mex",
+    "flag": "http://img.fifa.com/images/flags/4/mex.png"
+},
+{
+    "name": "Algeria",
+    "group": "D",
+    "abbreviation": "alg",
+    "flag": "http://img.fifa.com/images/flags/4/alg.png"
+},
+{
+    "name": "Argentina",
+    "group": "D",
+    "abbreviation": "arg",
+    "flag": "http://img.fifa.com/images/flags/4/arg.png"
+},
+{
+    "name": "Honduras",
+    "group": "D",
+    "abbreviation": "hon",
+    "flag": "http://img.fifa.com/images/flags/4/hon.png"
+},
+{
+    "name": "Portugal",
+    "group": "D",
+    "abbreviation": "por",
+    "flag": "http://img.fifa.com/images/flags/4/por.png"
+}]

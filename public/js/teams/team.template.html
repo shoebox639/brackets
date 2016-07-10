@@ -1,0 +1,23 @@
+<div class="team media" ng-class="{ editable: $ctrl.editable }"  ng-if="$ctrl.align === 'right'">
+  <form class="media-left media-middle">
+    <input type="number" class="form-control" ng-model="$ctrl.score"/>
+  </form>
+  <div class="text-uppercase media-body media-middle">
+      {{ $ctrl.team.name || $ctrl.team }}
+  </div>
+  <div class="media-right media-middle">
+    <img class="flag media-object" ng-src="{{$ctrl.team.flag}}"/>
+  </div>
+</div>
+
+<div class="team media" ng-class="{ editable: $ctrl.editable }" ng-if="$ctrl.align === 'left'">
+  <div class="media-left media-middle">
+    <img class="flag media-object" ng-src="{{$ctrl.team.flag}}"/>
+  </div>
+  <div class="text-uppercase media-body media-middle">
+      {{ $ctrl.team.name || $ctrl.team }}
+  </div>
+  <form class="media-right media-middle">
+    <input type="number" class="form-control" ng-model="$ctrl.score"/>
+  </form>
+</div>
