@@ -1,8 +1,6 @@
 <span ng-show="$ctrl.model.hasError()">
-  <span class="glyphicon glyphicon-remove form-control-feedback">
-  </span>
   <div ng-messages="$ctrl.model.$error">
-    <p class="help-block" ng-message="required">This field is required.</p>
-    <p class="help-block" ng-message="matches">Your passwords don't match.</p>
+    <p class="text-help" ng-message="required">This field is required.</p>
+    <p class="text-help" ng-message="matches">Your passwords don't match.</p>
   </div>
 </span>

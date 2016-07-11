@@ -1,11 +1,11 @@
 <h2>Log In</h2>
 <form name="form" ng-submit="form.$valid && $ctrl.submit(username, password)" novalidate>
-  <div class="form-group has-feedback" ng-class="{' has-error': form.username.hasError() }">
-    <input class="form-control" name="username" placeholder="Username" ng-model="username" required/>
+  <div class="form-group has-feedback" ng-class="{ 'has-danger': form.username.hasError() }">
+    <input class="form-control" ng-class="{ 'form-control-danger': form.username.hasError() }" name="username" placeholder="Username" ng-model="username" required/>
     <form-errors for="form.username"></form-errors>
   </div>
-  <div class="form-group has-feedback" ng-class="{' has-error': form.password.hasError() }">
-    <input class="form-control" name="password" placeholder="Password" ng-model="password" type="password" required/>
+  <div class="form-group has-feedback" ng-class="{ 'has-danger': form.password.hasError() }">
+    <input class="form-control" ng-class="{ 'form-control-danger': form.password.hasError() }" name="password" placeholder="Password" ng-model="password" type="password" required/>
     <form-errors for="form.password"></form-errors>
   </div>
   <div class="media">

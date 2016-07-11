@@ -1,3 +1,15 @@
+class LogoutController {
+  constructor(authService, $state) {
+    authService.logout();
+
+    $state.go('login');
+
+  }
+}
+
+LogoutController.$inject = ['authService', '$state'];
+
+
 module.exports = function($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise('/');
 
@@ -12,6 +24,10 @@ module.exports = function($stateProvider, $urlRouterProvider, $locationProvider)
     .state('login', {
       url: '/login',
       template: '<login class="col-md-offset-3 col-md-6"></login>'
+    })
+    .state('logout', {
+      url: '/logout',
+      controller: LogoutController
     })
     .state('signup', {
       url: '/signup',

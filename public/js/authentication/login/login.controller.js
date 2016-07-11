@@ -7,7 +7,7 @@ class Controller {
 
   submit(username, password) {
     this.authService.login(username, password)
-      .then(() => this.$state.go('root'));
+      .then(() => this.$state.go('brackets'));
   }
 }
 

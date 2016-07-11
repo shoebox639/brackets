@@ -1,8 +1,8 @@
-class AppController {
+class TeamController {
   constructor() {
   }
 }
 
-AppController.$inject = [];
+TeamController.$inject = [];
 
-module.exports = AppController;
+module.exports = TeamController;
