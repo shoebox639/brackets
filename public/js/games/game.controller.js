@@ -7,20 +7,17 @@ class GameController {
     return this.game.teams[1];
   }
 
-  win(team) {
-    this.team1.selected = false;
-    this.team2.selected = false;
-
-    team.selected = true;
-
-    this.onSelect();
+  isWin(team) {
+    const other = team === this.team1 ? this.team2 : this.team1;
+    return team.score > other.score;
   }
 
-  tie() {
-    this.team1.selected = true;
-    this.team2.selected = true;
+  isTie() {
+    return this.isDirty() && (this.team1.score === this.team2.score);
+  }
 
-    this.onSelect();
+  isDirty() {
+    return this.team1.dirty || this.team2.dirty;
   }
 }
 

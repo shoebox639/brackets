@@ -1,17 +1,3 @@
-<div class="team media" ng-class="{ editable: $ctrl.editable }"  ng-if="$ctrl.align === 'right'">
-  <div class="media-right media-middle">
-    <form>
-      <input type="number" class="form-control" ng-model="$ctrl.score"/>
-    </form>
-  </div>
-  <div class="text-uppercase media-body media-middle">
-      {{ $ctrl.team.name || $ctrl.team }}
-  </div>
-  <div class="media-right media-middle">
-    <img class="flag media-object" ng-src="http://img.fifa.com/images/flags/4/{{$ctrl.team.abbreviation}}.png"/>
-  </div>
-</div>
-
 <div class="team media" ng-class="{ editable: $ctrl.editable }" ng-if="$ctrl.align === 'left'">
   <div class="media-left media-middle">
     <img class="flag media-object" ng-src="http://img.fifa.com/images/flags/4/{{$ctrl.team.abbreviation}}.png"/>
@@ -20,8 +6,24 @@
       {{ $ctrl.team.name || $ctrl.team }}
   </div>
   <div class="media-right media-middle">
-    <form>
-      <input type="number" class="form-control" ng-model="$ctrl.score"/>
+    <form ng-if="$ctrl.editable">
+      <input type="number" class="form-control" ng-model="$ctrl.team.score" ng-change="$ctrl.onUpdate()"/>
     </form>
+    <div ng-if="!$ctrl.editable">{{$ctrl.team.score}}</div>
+  </div>
+</div>
+
+<div class="team media" ng-class="{ editable: $ctrl.editable }"  ng-if="$ctrl.align === 'right'">
+  <div class="media-right media-middle">
+    <form ng-if="$ctrl.editable">
+      <input type="number" class="form-control" ng-model="$ctrl.team.score" ng-change="$ctrl.onUpdate()"/>
+    </form>
+    <div ng-if="!$ctrl.editable">{{$ctrl.team.score}}</div>
+  </div>
+  <div class="text-uppercase media-body media-middle">
+      {{ $ctrl.team.name || $ctrl.team }}
+  </div>
+  <div class="media-right media-middle">
+    <img class="flag media-object" ng-src="http://img.fifa.com/images/flags/4/{{$ctrl.team.abbreviation}}.png"/>
   </div>
 </div>

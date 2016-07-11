@@ -14,14 +14,23 @@ img.flag {
   border-top: solid 1px #ccc;
 }
 
-.team {
+team {
   font-size: 20px;
   text-transform: uppercase;
 }
 
-.team input {
+team input.form-control {
   width: 60px;
 }
+
+.win {
+  color: #5cb85c;
+}
+.tie {
+  color: #f0ad4e;
+}
+
+
 
 // .team.editable:hover {
 //   background-color: #ccc;
@@ -30,9 +39,6 @@ img.flag {
 //   transition: background-color ease 0.5s;
 // }
 
-.fa.icon-success {
-  color: #5cb85c;
-}
 
 .media {
   margin-top: 5px;

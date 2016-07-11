@@ -8,8 +8,26 @@ class BracketController {
 
   }
 
+  get games() {
+    return this._games;
+  }
+
+  set games(games) {
+    console.log(yolo);
+    this._games = games;
+  }
+
   $postLink() {
-    this.bracketService.getAllGames().then(games => this.games = games);
+    this.bracketService.getAllGames()
+      .then(games => 
+        games.map(game => {
+          game.teams = game.teams.map(team => 
+            _.assign(team, { score: 0 })
+          );
+          return game;
+        })
+      )
+      .then(games => this._games = games);
 
     this.teamService.getAllTeams().then(teams => this.teams = teams);
   }
@@ -43,6 +61,8 @@ class BracketController {
         teamsByName[team.name].points += team.points;
       });
     });
+
+    console.log(teamsByName);
   }
 }
 

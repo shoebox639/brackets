@@ -1,13 +1,23 @@
 <div class="row row-md-center">
   <div class="col-md-5">
-    <team team="$ctrl.team1" align="left">
+    <team team="$ctrl.team1" editable="true" align="left">
     </team>
   </div>
   <div class="col-md-2 text-md-center">
-    <div>{{ $ctrl.game.time | date: 'h:mm a' }}</div>
+    <div class="media">
+      <div class="media-left win" ng-class="{ invisible: !$ctrl.isWin($ctrl.team1) }" >
+        <span class="fa fa-check"></span>
+      </div>
+      <div class="media-body" ng-class="{ tie: $ctrl.isTie() }">
+        {{ $ctrl.isTie() ? 'Tie' : 'vs' }}
+        </div>
+      <div class="media-right win" ng-class="{ invisible: !$ctrl.isWin($ctrl.team2) }" >
+        <span class="fa fa-check"></span>
+      </div>
+    </div>
   </div>
   <div class="col-md-5">
-    <team team="$ctrl.team2" align="right">
+    <team team="$ctrl.team2" editable="true" align="right">
     </team>
   </div>
 </div>

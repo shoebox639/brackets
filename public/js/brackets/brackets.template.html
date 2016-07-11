@@ -5,11 +5,14 @@
       {{ game.time | date: 'MMM d, yyyy' }}
     </div>
     <div>
+      {{ game.time | date: 'h:mm a' }}
+    </div>
+    <div>
       <strong ng-if="game.group">Group {{ game.group }}</strong>
       <strong ng-if="!game.group">Game {{ game.id }}</strong>
     </div>
   </div>
   <div class="col-md-10 media-body media-middle">
-    <game game="game" on-select="$ctrl.updateStandings()"></game>
+    <game game="game"></game>
   </div>
 </div>
