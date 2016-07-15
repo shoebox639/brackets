@@ -6,7 +6,9 @@ module.exports = {
   bindings: {
     'team':  '<',
     'align': '@',
-    'editable': '<'
+    'editable': '<',
+    'stat': '@',
+    'size': '@'
   },
   templateUrl: '/assets/teams/team.template.html',
   controller: require('./team.controller')

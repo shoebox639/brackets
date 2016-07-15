@@ -2,6 +2,21 @@ body {
   font-family: "Open Sans", sans-serif
 }
 
+nav.navbar {
+  margin-bottom: 20px;
+}
+
+.main-content {
+  margin-top: 80px;
+}
+
+section {
+  margin-top: 20px
+}
+section > section {
+  margin-top: 10px
+}
+
 img.flag {
   border: 1px solid #ccc;
 }
@@ -21,6 +36,14 @@ team {
 
 team input.form-control {
   width: 60px;
+}
+
+team.sm {
+  font-size: 16px;
+}
+
+team.sm img.flag {
+  width: 50px;
 }
 
 .win {

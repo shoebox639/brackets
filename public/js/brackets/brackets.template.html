@@ -1,18 +1,25 @@
-<h2>Games</h2>
-<div class="row game media" ng-repeat="game in $ctrl.games | orderBy: 'time'">
-  <div class="col-md-2 media-left media-middle">
-    <div>
-      {{ game.time | date: 'MMM d, yyyy' }}
+<section>
+  <h1>Group Standings</h1>
+  <team-standings standings="$ctrl.teamsByGroup"></team-standings>
+</section>
+
+<section>
+  <h1>Games</h1>
+  <div class="row game media" ng-repeat="game in $ctrl.games | orderBy: 'time'">
+    <div class="col-md-2 media-left media-middle">
+      <div>
+        {{ game.time | date: 'MMM d, yyyy' }}
+      </div>
+      <div>
+        {{ game.time | date: 'h:mm a' }}
+      </div>
+      <div>
+        <strong ng-if="game.group">Group {{ game.group }}</strong>
+        <strong ng-if="!game.group">Game {{ game.id }}</strong>
+      </div>
     </div>
-    <div>
-      {{ game.time | date: 'h:mm a' }}
-    </div>
-    <div>
-      <strong ng-if="game.group">Group {{ game.group }}</strong>
-      <strong ng-if="!game.group">Game {{ game.id }}</strong>
+    <div class="col-md-10 media-body media-middle">
+      <game game="game"></game>
     </div>
   </div>
-  <div class="col-md-10 media-body media-middle">
-    <game game="game"></game>
-  </div>
-</div>
+</section>

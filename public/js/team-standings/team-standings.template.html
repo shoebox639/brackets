@@ -1,0 +1,8 @@
+<div class="row">
+  <section class="col-md-3 col-sm-6 col-xs-12" ng-repeat="(group, teams) in $ctrl.standings">
+    <h3>Group {{group}}</h3>
+    <div class="row" ng-repeat="team in teams">
+      <team class="col-md-12 sm" team="team" stat="points" align="left"></team>
+    </div>
+  </section>
+</div>

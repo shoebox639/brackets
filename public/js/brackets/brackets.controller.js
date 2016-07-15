@@ -8,15 +8,6 @@ class BracketController {
 
   }
 
-  get games() {
-    return this._games;
-  }
-
-  set games(games) {
-    console.log(yolo);
-    this._games = games;
-  }
-
   $postLink() {
     this.bracketService.getAllGames()
       .then(games => 
@@ -27,42 +18,83 @@ class BracketController {
           return game;
         })
       )
-      .then(games => this._games = games);
+      .then(games => this.games = games);
 
-    this.teamService.getAllTeams().then(teams => this.teams = teams);
+    this.teamService.getAllTeams().then((teams) => {
+      this.teams = teams;
+      this.teamsByName = this.getTeamsByName(this.teams);
+      this.teamsByGroup = this.getTeamsByGroup(this.teams);
+    });
   }
 
-  get teamsByName() {
-    return _.chain(this.teams)
+  getTeamsByName(teams) {
+    return _.chain(teams)
       .keyBy('name')
-      .forEach((v, k) => v.points = 0)
+      .forEach(v => {
+        v.points = 0;
+        v.score = 0;
+        v.gd = 0;
+        v.beat = [];
+      })
       .value();
   }
 
-  get teamsByGroup() {
-    return _.groupBy(this.teams, 'group');
+  getTeamsByGroup(teams) {
+    return _.chain(teams)
+      .sort((t1, t2) => {
+        if (_.includes(t1.beat, t2.name)) {
+          return 1;
+        }
+        else if (_.includes(t2.beat, t1.name)) {
+          return -1;
+        }
+        return 0;
+      })
+      .sortBy([
+        team => -team.points,
+        team => -team.gd,
+        team => -team.score,
+      ])
+      .groupBy('group')
+      .value();
+  }
+
+  updateBracket() {
+    bracketService.updateBracket(this.games);
   }
 
   updateStandings() {
-    const results = this.games.map((game) => {
-      return game.teams
-        .filter(team => team.selected)
-        .map(team => team.name);
-    }).filter(result => result.length)
-      .map(result => {
-        const points = result.length > 1 ? 1 : 3;
-        return result.map(team => ({ name: team, points }));
+    this.teamsByName = this.getTeamsByName(this.teams);
+
+    this.games
+      .filter(game => _.some(game.teams, team => team.dirty))
+      .forEach((game) => {
+        const t1Score = game.teams[0].score;
+        const t2score = game.teams[1].score;
+        const team1 = this.teamsByName[game.teams[0].name];
+        const team2 = this.teamsByName[game.teams[1].name];
+
+        team1.score += t1Score;
+        team2.score += t2score;
+
+        team1.gd += (t1Score - t2score);
+        team2.gd += (t2score - t1Score);
+
+        if (t1Score > t2score) {
+          team1.points += 3;
+          team1.beat.push(team2.name);
+        }
+        else if (t2score > t1Score) {
+          team2.points += 3;
+          team2.beat.push(team1.name);
+        }
+        else {
+          team1.points += 1;
+          team2.points += 1;
+        }
       });
 
-    const teamsByName = this.teamsByName;
-
-    results.forEach((game) => {
-      game.forEach(team => {
-        teamsByName[team.name].points += team.points;
-      });
-    });
-
-    console.log(teamsByName);
+    this.teamsByGroup = this.getTeamsByGroup(this.teams);
   }
 }
 

@@ -9,7 +9,8 @@ const app = angular.module('app', [
   require('./alerts'),
   require('./brackets'),
   require('./games'),
-  require('./teams')
+  require('./teams'),
+  require('./nav')
 ]);
 
 app.controller('AppController', require('./app.controller'))

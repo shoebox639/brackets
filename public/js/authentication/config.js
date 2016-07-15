@@ -19,11 +19,11 @@ module.exports = function($stateProvider, $urlRouterProvider, $locationProvider)
         isLoggedIn: authService => authService.isLoggedIn()
       },
       controller: 'AppController',
-      template: '<ui-view class="col-md-12"></ui-view>'
+      templateUrl: '/assets/app.template.html'
     })
     .state('login', {
       url: '/login',
-      template: '<login class="col-md-offset-3 col-md-6"></login>'
+      template: '<div class="row"><login class="col-md-offset-3 col-md-6"></login></div>'
     })
     .state('logout', {
       url: '/logout',
@@ -31,7 +31,7 @@ module.exports = function($stateProvider, $urlRouterProvider, $locationProvider)
     })
     .state('signup', {
       url: '/signup',
-      template: '<create-account class="col-md-offset-3 col-md-6"></create-account>'
+      template: '<div class="row"><create-account class="col-md-offset-3 col-md-6"></create-account></div>'
     });
 };
 module.exports.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
